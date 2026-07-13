@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        background:#f2f2f2;
+        font-family:Arial, sans-serif;
+    }
+
+    .container{
+        width:700px;
+        padding:10px;
+        border:3px solid #000;
+
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows:100px 100px 100px;
+        gap:10px;
+
+        grid-template-areas:
+            "one one two three"
+            "four five five five"
+            "six seven eight eight";
+    }
+
+    .box{
+        border:2px solid #000;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:24px;
+        font-weight:bold;
+        background:white;
+    }
+
+    .one{grid-area:one; background-color: red;}
+    .two{grid-area:two;background-color:blue}
+    .three{grid-area:three;background-color:greenyellow}
+    .four{grid-area:four;background-color:purple}
+    .five{grid-area:five;background-color:burlywood}
+    .six{grid-area:six;background-color: aqua;}
+    .seven{grid-area:seven;background-color:teal}
+    .eight{grid-area:eight;background-color:lightgreen}
+
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <div class="box one">1</div>
+    <div class="box two">2</div>
+    <div class="box three">3</div>
+    <div class="box four">4</div>
+    <div class="box five">5</div>
+    <div class="box six">6</div>
+    <div class="box seven">7</div>
+    <div class="box eight">8</div>
+</div>
+
+</body>
+</html>
